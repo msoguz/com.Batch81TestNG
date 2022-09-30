@@ -30,6 +30,6 @@ public class C01_PageClass {
         //4 Basarili giris yapilamadigini test edin
         Assert.assertTrue(facebookPage.girisYapilamadi.isDisplayed());
 
-
+        Driver.closeDriver();
     }
 }

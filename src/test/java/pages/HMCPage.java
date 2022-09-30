@@ -15,4 +15,9 @@ public class HMCPage {
     @FindBy (xpath = "//*[text()='Log in']")
     public WebElement login;
 
+    @FindBy (xpath = "//*[@id='UserName']")
+    public WebElement userName;
+
+    @FindBy (xpath = "//*[@class='username username-hide-on-mobile']")
+    public WebElement girisYapildi;
 }

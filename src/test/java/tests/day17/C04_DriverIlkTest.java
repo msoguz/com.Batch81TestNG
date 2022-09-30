@@ -7,8 +7,8 @@ public class C04_DriverIlkTest {
     @Test
     public void test01() {
         /*
-        TestBase class'ina extend ederek kullandigimiz driver yerine artik Driver class'indan kullanacagimiz
-        getDriver() stattic method'unu kullaniriz
+        Bugune kadar TestBase class'ina extend ederek kullandigimiz driver yerine artik Driver class'indan kullanacagimiz
+        getDriver() static method'unu kullanacagiz
          */
         Driver.getDriver().get("https://amazon.com");
         Driver.getDriver().get("https://bestbuy.com");

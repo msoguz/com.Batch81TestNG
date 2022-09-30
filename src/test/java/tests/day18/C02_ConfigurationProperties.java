@@ -10,9 +10,9 @@ public class C02_ConfigurationProperties {
     public void test01() {
         //Amazon ve facebook web sayfasina git
         String urlamazon=ConfigReader.getProperty("amazonUrl");
-        String urlFace=ConfigReader.getProperty("faceUrl");
+        String urlFacebook=ConfigReader.getProperty("facebookUrl");
         Driver.getDriver().get(urlamazon);
-        Driver.getDriver().get(urlFace);
+        Driver.getDriver().get(urlFacebook);
         Driver.closeDriver();
 
 
