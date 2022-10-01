@@ -1,4 +1,4 @@
-package tests.day18;
+package tests.day20_smokeTest;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,20 +8,18 @@ import pages.HMCPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C03_ConfigReader {
+public class C01_SmokePozitifTest {
 
     @Test
-    public void test01() {
-
+    public void pozitifTest() {
 
         //https://www.hotelmycamp.com/ adresine git
-        //login butonuna bas
         Driver.getDriver().get(ConfigReader.getProperty("hmcUrl"));
 
-
+        //login butonuna bas
+        HMCPage hmcPage=new HMCPage();
         //Page class'indaki locate'lerimize ulasabilmek icin Page class'imizdan bir obje olusturarak, olusturmus oldugumuz
         //obje ile page class'imizdaki locate'lerimize ulasbiliriz.
-        HMCPage hmcPage=new HMCPage();
         hmcPage.login.click();
 
         //test data username: manager ,
@@ -31,7 +29,7 @@ public class C03_ConfigReader {
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
 
         //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        Assert.assertTrue(hmcPage.girisYapilamadi.isDisplayed());
+        Assert.assertTrue(hmcPage.girisYapildi.isDisplayed());
 
         Driver.closeDriver();
     }

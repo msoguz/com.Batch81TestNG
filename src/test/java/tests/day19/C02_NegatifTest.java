@@ -23,9 +23,9 @@ public class C02_NegatifTest {
         hmcPage.login.click();
 
         //test data username: manager1 ,  test data password : manager1!
-        hmcPage.userName.sendKeys(ConfigReader.getProperty("manager1"));
+        hmcPage.userName.sendKeys(ConfigReader.getProperty("hmcWrongUserName"));
         Actions actions=new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("Manager1!")).sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("hmcWrongPassword")).sendKeys(Keys.ENTER).perform();
 
         //Degerleri girildiginde sayfaya girilemedigini test et
         Assert.assertTrue(hmcPage.girisYapilamadi.isDisplayed());

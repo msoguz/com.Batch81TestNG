@@ -6,10 +6,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
 public class Driver {
+    /*
+    POM'de Driver icin TestBase class'ina extends etmek yerine Driver class'indan static method'lar
+    kullanilarak driver olusturup, ilgili ayarlarin yapilmasi ve en sonda driver'in kapatilmasi tercih edilmistir.
+
+    POM'de Driver class'indaki getDriver()'in obje olusturularak kullanilmasini engellemek icin
+    Singleton Pattern kullanimi benimsenmistir.
+
+    Singleton PAttern: tekli kullanim, bir class'in farkli class'tan obje olusturularak kullanimini engellemek icin kullanilir.
+    Bunu saglamak icin yapmamaiz gereken sey oldukca basit. Obje olusturmak icin kullanilan contructor'i
+    private yaptigimizda baska class'larda Driver Class'indan obje olusturulmasi mumkun olmaz..
+     */
     private Driver(){
 
     }
@@ -38,6 +50,10 @@ public class Driver {
                 case "firefox" :
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
+                    break;
+                case "safari" :
+                    WebDriverManager.safaridriver().setup();
+                    driver=new SafariDriver();
                     break;
                 case "headless-chrome" :
                     WebDriverManager.chromedriver().setup();
