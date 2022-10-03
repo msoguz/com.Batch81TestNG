@@ -16,5 +16,7 @@ public class C04_DriverIlkTest {
         Driver.getDriver().get("https://hepsiburada.com");
         Driver.closeDriver();
 
+
+
     }
 }

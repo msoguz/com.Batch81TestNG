@@ -14,7 +14,7 @@ public class Odev extends TestBaseBeforeMethodAfterMethod {
     //○ wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
 
 
-    @Test
+    @Test (groups = "grup2")
     public void test01() {
         //2) https://www.youtube.com adresine gidin
         driver.get("https://www.youtube.com");

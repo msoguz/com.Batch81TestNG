@@ -34,4 +34,9 @@ public class C04_DependsOnMethod extends TestBaseBeforeClassAfterClass{
         assert !driver.findElement(By.cssSelector("div[class=\"a-section a-spacing-small a-spacing-top-small\"]")).getText().contains("amazon");
 
     }
+
+    @Test (groups = {"grup1, grup2"})
+    public void test04() {
+        System.out.println("Bak bu calisti");
+    }
 }

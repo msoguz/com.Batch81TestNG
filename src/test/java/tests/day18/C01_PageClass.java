@@ -10,7 +10,7 @@ public class C01_PageClass {
 
 
 
-    @Test
+    @Test (groups = "grup1")
     public void test01() {
 
         //1 - https://www.facebook.com/ adresine gidin

@@ -17,7 +17,7 @@ public class C02_HardAssert extends TestBaseBeforeMethodAfterMethod {
         Assert.assertTrue(driver.getTitle().contains("Amazon"));
 
         //3-arama kutusnun erişilebilir oldugunu tets edin
-        WebElement aramaKutusu=driver.findElement(By.id("twotabsa=earchtextbox"));
+        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         Assert.assertTrue(aramaKutusu.isEnabled());
 
         //4-arama kutusuna Nuella yazıp aratın

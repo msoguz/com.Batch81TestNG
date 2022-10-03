@@ -9,6 +9,7 @@
     <test name="baska Test">
         <classes>
             <class name="tests.day19.C03_PozitifTest"/>
+
         </classes>
     </test>
 </suite>

@@ -7,7 +7,7 @@ public class C01_DependsOnMethod extends TestBaseBeforeMethodAfterMethod {
 
     @Test
     public void test01() {
-        driver.get("https://www.Wamazon1.com");
+        driver.get("https://www.amazon.com");
     }
 
     @Test (dependsOnMethods = "test01")
