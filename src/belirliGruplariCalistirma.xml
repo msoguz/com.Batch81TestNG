@@ -21,7 +21,17 @@
             </groups>
             <packages>
                 <package name="tests.day16"/>
-                <package name="tests.day18"></package>
+                <package name="tests.day18"/>
             </packages>
         </test>
+    <test name="Belirli Gruplar 2">
+        <groups>
+            <run>
+                <exclude name="grup2"></exclude>
+            </run>                
+        </groups>
+        <packages>
+            <package name="tests.day18"></package>
+        </packages>
+    </test>
 </suite>

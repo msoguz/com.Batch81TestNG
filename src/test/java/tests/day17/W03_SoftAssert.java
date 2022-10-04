@@ -71,10 +71,6 @@ public class W03_SoftAssert extends TestBaseBeforeMethodAfterMethod {
         }
         softAssert.assertAll();
 
-
-
-
-
     }
     }
 
