@@ -24,6 +24,9 @@ public class BrcPage {
     @FindBy(id = "dropdown-basic-button']")
     public WebElement kullaniciProfilIsmi;
 
+    @FindBy(xpath = "//*[@id='dropdown-basic-button']")
+    public WebElement basariliGiris;
+
 
 
 }

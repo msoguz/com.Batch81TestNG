@@ -13,7 +13,7 @@ public class C03_SoftAssert extends TestBaseCross {
     @Test
     public void test01() {
         /*
-        SoftAssert baslangic ve bitis satirlari arasindaki tu m assrtion'lari yaparak
+        SoftAssert baslangic ve bitis satirlari arasindaki tum assrtion'lari yaparak
         bitis olarak belirtmemiz gereken assretAll() methoduyla test methodumuzdaki butun assertionlari kontrol eder.
         Failed olan olursa assertion yaptigimiz method'un sonuna yazdigimiz mesaji bize consdolda verir.
          */
