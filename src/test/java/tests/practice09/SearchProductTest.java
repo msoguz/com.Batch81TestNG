@@ -41,27 +41,27 @@ public class SearchProductTest extends TestBaseRapor {
 
         //   String productPageUrl="https://automationexercise.com/products";
         //   Assert.assertEquals(Driver.getDriver().getCurrentUrl(),productPageUrl);
-        extentTest.info(" Kullanıcının TÜM ÜRÜNLER sayfasına başarıyla gittiğini doğrulayın");
+        extentTest.info(" Kullanıcının TÜM ÜRÜNLER sayfasına başarıyla gittiği doğrulandi");
 
         // 6. Arama girişine ürün adını girin ve ara düğmesine tıklayın
         searchProductPage.searchBox.sendKeys("blue top");
         searchProductPage.searchButton.click();
         //  actions.click(searchProductPage.searchButton).click().perform();  boyle de olur!!!!!
+        extentTest.info(" Arama girişine ürün adı girildi ve ara düğmesine tıklandi");
 
-
-        // 7. 'ARARAN ÜRÜNLER'in görünür olduğunu doğrulayın
+        // 7. 'ARANAN ÜRÜNLER'in görünür olduğunu doğrulayın
         Assert.assertTrue(searchProductPage.searchProductTitle.isDisplayed());
-       //List<WebElement> urunListesi=searchProductPage.searchProductList;
-      //  for (WebElement each : urunListesi
-      //  ) {
-     //       Assert.assertTrue(each.isDisplayed());
+       List<WebElement> urunListesi= searchProductPage.searchProductList;
+        for (WebElement each : urunListesi
+        ) {
+            Assert.assertTrue(each.isDisplayed());
             Thread.sleep(500);
         }
+        extentTest.info(" ARANAN ÜRÜNLER'in görünür olduğunu doğrulandi");
+         //8. Aramayla ilgili ürünün ("blue top") görünür olduğunu doğrulayın
+          actions.click(searchProductPage.viewProduct).perform();
+           Assert.assertTrue(searchProductPage.blueTop.isDisplayed());
+        extentTest.pass("Aramayla ilgili ürünün (\"blue top\") görünür olduğu doğrulandı");
 
-        // 8. Aramayla ilgili ürünün ("blue top") görünür olduğunu doğrulayın
-        //  actions.click(searchProductPage.viewProduct).perform();
-        //   Assert.assertTrue(searchProductPage.blueTop.isDisplayed());
-       // extentTest.pass("Aramayla ilgili ürünün ("blue top") görünür olduğu doğrulandı");
-
-   // }
+    }
 }

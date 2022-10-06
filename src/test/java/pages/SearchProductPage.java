@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class SearchProductPage {
     public SearchProductPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -35,6 +37,6 @@ public class SearchProductPage {
     @FindBy(xpath = "(//h2)[3]")
     public WebElement blueTop;
 
-    @FindBy(xpath = "")
-    public WebElement searchProductList;
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    public List<WebElement> searchProductList;
 }
