@@ -16,29 +16,32 @@ public class SearchProductTest extends TestBaseRapor {
     Actions actions=new Actions(Driver.getDriver());
     @Test
     public void searchProductPage() throws InterruptedException {
-
+        extentTest=extentReports.createTest("automationexcercise","Web automation");
 
         // 1. Tarayıcıyı başlat
         // 2. 'http://automationexercise.com' url'sine gidin
         Driver.getDriver().get("http://automationexercise.com");
-
+        extentTest.info("Tarayici baslatildi");
+        extentTest.info("'http://automationexercise.com' url'ine gidildi");
         // 3. Ana sayfanın başarıyla görünür olduğunu doğrulayın
         //TODO: Test case bizden hangi sayafayi dogrulammizi istiyorsa
         // TODO: o sayfadan unique olan bir seyi locate etmemiz lazim.(url olabilir.)
         String homeUrl = "https://automationexercise.com/";
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(), homeUrl);
+        extentTest.info("Ana sayfanın başarıyla görünür olduğu doğrulandi");
 
         searchProductPage = new SearchProductPage();
 
         // 4. 'Ürünler' butonuna tıklayın
         searchProductPage.productPageUrl.click();
+        extentTest.info(" 'Ürünler' butonuna tıklandi");
 
         // 5. Kullanıcının TÜM ÜRÜNLER sayfasına başarıyla gittiğini doğrulayın]
         Assert.assertTrue(searchProductPage.allProductTitle.isDisplayed());
 
         //   String productPageUrl="https://automationexercise.com/products";
         //   Assert.assertEquals(Driver.getDriver().getCurrentUrl(),productPageUrl);
-
+        extentTest.info(" Kullanıcının TÜM ÜRÜNLER sayfasına başarıyla gittiğini doğrulayın");
 
         // 6. Arama girişine ürün adını girin ve ara düğmesine tıklayın
         searchProductPage.searchBox.sendKeys("blue top");
@@ -48,7 +51,7 @@ public class SearchProductTest extends TestBaseRapor {
 
         // 7. 'ARARAN ÜRÜNLER'in görünür olduğunu doğrulayın
         Assert.assertTrue(searchProductPage.searchProductTitle.isDisplayed());
-        //List<WebElement> urunListesi=searchProductPage.searchProductList;
+       //List<WebElement> urunListesi=searchProductPage.searchProductList;
       //  for (WebElement each : urunListesi
       //  ) {
      //       Assert.assertTrue(each.isDisplayed());
@@ -58,6 +61,7 @@ public class SearchProductTest extends TestBaseRapor {
         // 8. Aramayla ilgili ürünün ("blue top") görünür olduğunu doğrulayın
         //  actions.click(searchProductPage.viewProduct).perform();
         //   Assert.assertTrue(searchProductPage.blueTop.isDisplayed());
+       // extentTest.pass("Aramayla ilgili ürünün ("blue top") görünür olduğu doğrulandı");
 
    // }
 }

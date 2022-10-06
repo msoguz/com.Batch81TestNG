@@ -41,12 +41,8 @@ public class C01_RaporluTest extends TestBaseRapor {
         Assert.assertEquals(expectedUserName,actualUserName);
         extentTest.pass("Sayfaya basarili sekilde girildi.");
 
-
 }
 }
-
-
-
 /*
 Hatanin resmini RAPORDA görmek istersek  target altinda Rapor icinde yazdirilan resmin uzernie sag tiklayin --->
 Open in --> uzerine gelin -->  Explorer tiklayin bilgisayardaki dosyaninzin icine yönleneceksiniz

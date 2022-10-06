@@ -26,6 +26,6 @@ public class TestBaseCross {
 
     @AfterClass
     public void tearDown(){
-        CrossDriver.closeDriver();
+        CrossDriver.quitDriver();
     }
 }
