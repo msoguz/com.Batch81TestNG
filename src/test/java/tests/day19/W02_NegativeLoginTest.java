@@ -18,19 +18,19 @@ public class W02_NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
 
         //login butonuna bas
-        brcPage.ilkLoginButonu.click();
+        brcPage.brcilkLoginButonu.click();
 
         //test data user email: customer@blurentalcars.com ,
-        brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcWrongEmail"));
+        brcPage.brcemailTextBox.sendKeys(ConfigReader.getProperty("brcWrongEmail"));
 
         //test data password : 12345
-        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
+        brcPage.brcpasswordTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
 
         //login butonuna tikla
-        brcPage.ikinciLoginButonu.click();
+        brcPage.brcikinciLoginButonu.click();
 
         //Degerleri girildiginde sayfaya basarili sekilde girilemedigini test et
-        Assert.assertTrue(brcPage.ikinciLoginButonu.isDisplayed());
+        Assert.assertTrue(brcPage.brcikinciLoginButonu.isDisplayed());
 
     }
 

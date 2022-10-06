@@ -17,16 +17,16 @@ public class W01_PozitifLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
 
         //login butonuna bas
-        brcPage.ilkLoginButonu.click();
+        brcPage.brcilkLoginButonu.click();
 
         //test data user email: customer@blurentalcars.com ,
-        brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcValidEmail"));
+        brcPage.brcemailTextBox.sendKeys(ConfigReader.getProperty("brcValidEmail"));
 
         //test data password : 12345
-        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcValidPassword"));
+        brcPage.brcpasswordTextBox.sendKeys(ConfigReader.getProperty("brcValidPassword"));
         //login butonuna tikla
         Thread.sleep(2000);
-        brcPage.ikinciLoginButonu.click();
+        brcPage.brcikinciLoginButonu.click();
 
         //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
 

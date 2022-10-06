@@ -2,7 +2,14 @@
 <suite name="tum testleri calistirma" parallel="classes" thread-count="3">
     <test name="regression">
         <packages>
-            <package name="tests.*"></package>
+            <package name="tests.*"/>
         </packages>
     </test>
 </suite>
+
+<!--
+TestNG'de .xml file ile paralel test yapmak istersek suite tag'indan sonra paralel tag'i ile
+kac browser'de calistirmak istersek thread-count tag'ini kullaniriz.
+
+
+-->

@@ -10,16 +10,16 @@ public class BrcPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
-    public WebElement ilkLoginButonu;
+    public WebElement brcilkLoginButonu;
 
     @FindBy(xpath = "//input[@name='email']")
-    public WebElement emailTextBox;
+    public WebElement brcemailTextBox;
 
     @FindBy(xpath = "//input[@name='password']")
-    public WebElement passwordTextBox;
+    public WebElement brcpasswordTextBox;
 
     @FindBy(xpath = "//*[@class='btn btn-primary']")
-    public WebElement ikinciLoginButonu;
+    public WebElement brcikinciLoginButonu;
 
     @FindBy(id = "dropdown-basic-button']")
     public WebElement kullaniciProfilIsmi;
