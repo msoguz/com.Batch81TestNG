@@ -32,7 +32,7 @@ public class C01_RaporluTest extends TestBaseRapor {
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("brcValidPassword"))
                         .sendKeys(Keys.ENTER).perform();
-        extentTest.info("DDogru kullanici emaill ve user password girildi.");
+        extentTest.info("Dogru kullanici email ve user password girildi.");
         extentTest.info("Ikinci login butonuna basildi");
 
 // -Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
@@ -40,7 +40,6 @@ public class C01_RaporluTest extends TestBaseRapor {
         String expectedUserName="John Walker";
         Assert.assertEquals(expectedUserName,actualUserName);
         extentTest.pass("Sayfaya basarili sekilde girildi.");
-
 }
 }
 /*
