@@ -10,9 +10,9 @@ public class C04_DependsOnMethod extends TestBaseBeforeClassAfterClass{
     /*
     DependsOn Method test methodlarinin calisma siralamasina karismaz.
     SAdece bagli olan test, baglandigi testin sonucuna bakar, baglandigi test PASSED olmazsa,
-    baglana test hic calismaz(ignore)
+    baglanan test hic calismaz(ignore)
      */
-    //TODO: dendsOnMethods'ta test adindan sonra virgul konularak priority ve sirasi yazilabilir.
+    //TODO: dependsOnMethods'ta test adindan sonra virgul konularak priority ve sirasi yazilabilir.
 
     @Test
     public void test01() {
