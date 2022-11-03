@@ -41,8 +41,8 @@ public class W02_SoftAssert extends TestBaseBeforeMethodAfterMethod {
         softAssert.assertTrue(sonucYaziElementi.getText().contains("Nutella"), "sonuc yazisi Kutella icermiyor.");
 
 
-        //softAssert'e bitis satirini soylemek icin assertAll() kullanilir.
-        //Bu satir yazilmazsa assertion gorevi yapilmamis olur.
+        //TODO:softAssert'e bitis satirini soylemek icin assertAll() kullanilir.
+        //TODO:Bu satir yazilmazsa assertion gorevi yapilmamis olur.
         softAssert.assertAll();
 
         /*
@@ -52,6 +52,7 @@ public class W02_SoftAssert extends TestBaseBeforeMethodAfterMethod {
          */
 
         System.out.println("Assertion'larda fail olan olursa burasi calismaz");
+
 
 
     }
